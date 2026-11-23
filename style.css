@@ -148,3 +148,22 @@ footer { border-top: 1px solid var(--line); padding: 22px 6vw; display: flex; ju
   object-fit: contain !important;
   margin-inline: auto;
 }
+
+/* Final gallery sizing: portrait images fit comfortably within one screen. */
+.photo-grid .photo img,
+.photo-grid .photo-tall img,
+.photo-grid .photo-wide img {
+  display: block;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 64vh !important;
+  object-fit: contain !important;
+  margin-inline: auto;
+}
+
+/* Enlarge only the hero photograph, without moving the header or text. */
+@media (min-width: 761px) {
+  .hero-art { height: 460px; }
+  .hero { min-height: 0; }
+}
