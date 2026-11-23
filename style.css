@@ -61,3 +61,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin-block: 32px; }
   height: auto;
   object-fit: contain;
 }
+.photo img,
+.photo-tall img,
+.photo-wide img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+}
