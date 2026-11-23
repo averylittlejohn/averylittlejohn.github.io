@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Responsive portrait TikTok players */
+    .film-grid { align-items: start; }
+    .tiktok-preview { width: 100%; max-width: 360px; margin: 0 auto; aspect-ratio: 9 / 16; overflow: hidden; background: #dedbd1; }
+    .tiktok-preview iframe { display: block; width: 100%; height: 100%; border: 0; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -45,10 +51,10 @@
       <div class="photo-grid">
         <figure class="photo photo-tall"><img src="assets/photos/photo-01.jpg" alt="Warm glow in Iceland" loading="lazy"><figcaption><span>01</span> Warm glow · Iceland</figcaption></figure>
         <figure class="photo"><img src="assets/photos/photo-02.jpg" alt="Coastal light in Iceland" loading="lazy"><figcaption><span>02</span> Coastal light · Iceland</figcaption></figure>
-        <figure class="photo"><img src="assets/photos/photo-03-new.jpg" alt="A peaceful afternoon in Tegernsee" loading="lazy"><figcaption><span>03</span> A peaceful afternoon · Tegernsee</figcaption></figure>
-        <figure class="photo"><img src="assets/photos/photo-04-new.jpg" alt="On the water in Tegernsee" loading="lazy"><figcaption><span>04</span> On the water · Tegernsee</figcaption></figure>
-        <figure class="photo photo-wide"><img src="assets/photos/photo-05-new.jpg" alt="Reflections at the castle in Munich" loading="lazy"><figcaption><span>05</span> Reflections at the castle · Munich</figcaption></figure>
-        <figure class="photo"><img src="assets/photos/photo-06-new.jpg" alt="The heart of the city in Munich" loading="lazy"><figcaption><span>06</span> The heart of the city · Munich</figcaption></figure>
+        <figure class="photo"><img src="assets/photos/photo-03-cropped.jpg" alt="A peaceful afternoon in Tegernsee" loading="lazy"><figcaption><span>03</span> A peaceful afternoon · Tegernsee</figcaption></figure>
+        <figure class="photo"><img src="assets/photos/photo-04-cropped.jpg" alt="On the water in Tegernsee" loading="lazy"><figcaption><span>04</span> On the water · Tegernsee</figcaption></figure>
+        <figure class="photo photo-wide"><img src="assets/photos/photo-05-cropped.jpg" alt="Reflections at the castle in Munich" loading="lazy"><figcaption><span>05</span> Reflections at the castle · Munich</figcaption></figure>
+        <figure class="photo"><img src="assets/photos/photo-06-cropped.jpg" alt="The heart of the city in Munich" loading="lazy"><figcaption><span>06</span> The heart of the city · Munich</figcaption></figure>
         <figure class="photo"><img src="assets/photos/photo-09.jpg" alt="Above the rooftops in Berlin" loading="lazy"><figcaption><span>07</span> Above the rooftops · Berlin</figcaption></figure>
         <figure class="photo"><img src="assets/photos/photo-08.jpg" alt="Evening atmosphere in Berlin" loading="lazy"><figcaption><span>08</span> Evening atmosphere · Berlin</figcaption></figure>
         <figure class="photo"><img src="assets/photos/photo-07.jpg" alt="The Rosinenbomber in Berlin" loading="lazy"><figcaption><span>09</span> The Rosinenbomber · Berlin</figcaption></figure>
@@ -63,11 +69,11 @@
       </div>
       <div class="film-grid">
         <article class="film-card">
-          <div class="film-placeholder"><span>VIDEO 01</span><small>Original short-form video</small></div>
+          <div class="tiktok-preview"><iframe src="https://www.tiktok.com/player/v1/7711366853544791326" title="Tegernsee travel film" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
           <div class="film-caption"><div><h3>Travel &amp; landscape film</h3><p>Tegernsee</p></div><a class="text-link video-link" href="https://www.tiktok.com/@aves_lj/video/7711366853544791326" target="_blank" rel="noopener noreferrer">Watch on TikTok ↗</a></div>
         </article>
         <article class="film-card">
-          <div class="film-placeholder film-placeholder-two"><span>VIDEO 02</span><small>Original short-form video</small></div>
+          <div class="tiktok-preview"><iframe src="https://www.tiktok.com/player/v1/7709572181423934751" title="Berlin Marathon film" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
           <div class="film-caption"><div><h3>Event &amp; atmosphere film</h3><p>Berlin Marathon</p></div><a class="text-link video-link" href="https://www.tiktok.com/@aves_lj/video/7709572181423934751" target="_blank" rel="noopener noreferrer">Watch on TikTok ↗</a></div>
         </article>
       </div>
