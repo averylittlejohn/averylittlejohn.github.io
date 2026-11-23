@@ -132,3 +132,19 @@ footer { border-top: 1px solid var(--line); padding: 22px 6vw; display: flex; ju
 @media (max-width: 520px) {
   .photo-grid { columns: 1; }
 }
+
+/* Smaller masonry photographs on desktop; no cropping. */
+@media (min-width: 761px) {
+  .photo-grid { columns: 3; column-gap: 18px; }
+  .photo-grid .photo { margin-bottom: 20px; }
+}
+.photo-grid .photo img,
+.photo-grid .photo-tall img,
+.photo-grid .photo-wide img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 78vh !important;
+  object-fit: contain !important;
+  margin-inline: auto;
+}
