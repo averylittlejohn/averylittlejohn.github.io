@@ -164,6 +164,6 @@ footer { border-top: 1px solid var(--line); padding: 22px 6vw; display: flex; ju
 
 /* Enlarge only the hero photograph, without moving the header or text. */
 @media (min-width: 761px) {
-  .hero-art { height: 460px; }
+  .hero-art { height: 575px; }
   .hero { min-height: 0; }
 }
