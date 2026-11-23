@@ -52,3 +52,12 @@ hr { border: 0; border-top: 1px solid var(--line); margin-block: 32px; }
   .hero, .intro { padding-block: 60px; }
   section { padding-block: 36px; }
 }
+/* Display complete photographs without cropping */
+.photo img,
+.photo-tall img,
+.photo-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
