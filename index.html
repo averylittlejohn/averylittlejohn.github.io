@@ -93,7 +93,7 @@
       <div class="about-copy">
         <p>I'm Avery, a Reykjavík-based aspiring photographer and filmmaker with a background in data science and experience in Iceland's tourism and hospitality industry.</p>
         <p>I love capturing unique moments and finding ways to communicate the atmosphere of a place through thoughtful framing, natural light, movement, and colour. My independent projects are filmed, edited, and colour graded entirely by me, using a Luna Ultra camera and DaVinci Resolve.</p>
-        <p>I'm drawn to visual storytelling, travel, landscapes, and the experiences that connect people to a place.</p>
+        <p>I'm drawn to visual storytelling, travel, landscapes, and the experiences that connect us all to the places we have been.</p>
       </div>
     </section>
 
@@ -107,5 +107,37 @@
 
   <footer><span>© <span id="year"></span> Avery Littlejohn</span><a href="https://www.tiktok.com/@aves_lj" target="_blank" rel="noopener noreferrer">TikTok profile ↗</a><a href="#top">Back to top ↑</a></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    // Keep photographs in their numbered order, with tight masonry spacing.
+    (function () {
+      const gallery = document.querySelector('.photo-grid');
+      if (!gallery) return;
+      const photos = Array.from(gallery.querySelectorAll('.photo'));
+      let pending = false;
+      function layout() {
+        pending = false;
+        if (getComputedStyle(gallery).display !== 'grid') return;
+        const row = parseFloat(getComputedStyle(gallery).gridAutoRows) || 4;
+        const gap = parseFloat(getComputedStyle(gallery).rowGap) || 0;
+        for (const photo of photos) photo.style.gridRowEnd = 'span 1';
+        for (const photo of photos) {
+          const height = photo.getBoundingClientRect().height;
+          photo.style.gridRowEnd = `span ${Math.max(1, Math.ceil((height + gap) / (row + gap)))}`;
+        }
+      }
+      function schedule() {
+        if (!pending) { pending = true; requestAnimationFrame(layout); }
+      }
+      photos.forEach(photo => {
+        const img = photo.querySelector('img');
+        if (img && !img.complete) img.addEventListener('load', schedule, { once: true });
+      });
+      window.addEventListener('resize', schedule);
+      window.addEventListener('load', schedule);
+      if (document.fonts) document.fonts.ready.then(schedule);
+      schedule();
+    })();
+  </script>
 </body>
 </html>
